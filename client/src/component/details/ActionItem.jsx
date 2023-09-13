@@ -24,7 +24,7 @@ const StyledButton=styled(Button)(({theme})=>({
         width:'46%'
     },
     [theme.breakpoints.down('sm')]:{
-        width:'48%'
+        width:'48'
     }
 }));
 
