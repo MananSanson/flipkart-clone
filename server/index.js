@@ -15,7 +15,7 @@ app.use(bodyParser.json({extended:true}));
 app.use(bodyParser.urlencoded({extended:true}));  
 app.use('/', Router);
 
-const PORT=process.env.PORT || 8000;
+const PORT='https://flipkart-clone-xwz3.onrender.com';
 
 const USERNAME=process.env.DB_USERNAME;
 const PASSWORD=process.env.DB_PASSWORD;
