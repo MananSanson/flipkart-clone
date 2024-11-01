@@ -18,7 +18,8 @@ app.use('/', Router);
 const PORT= process.env.PORT || 8000;
 
 const USERNAME=process.env.DB_USERNAME;
-const PASSWORD=process.env.DB_PASSWORD;
+const PASSWORD=encodeURIComponent( process.env.DB_PASSWORD);
+
 
 const URL=process.env.MONGODB_URI || `mongodb://${USERNAME}:${PASSWORD}@ac-meqna97-shard-00-00.mum8tgk.mongodb.net:27017,ac-meqna97-shard-00-01.mum8tgk.mongodb.net:27017,ac-meqna97-shard-00-02.mum8tgk.mongodb.net:27017/?ssl=true&replicaSet=atlas-8iihv5-shard-0&authSource=admin&retryWrites=true&w=majority`;
 
