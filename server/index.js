@@ -26,6 +26,9 @@ const PASSWORD=encodeURIComponent( process.env.DB_PASSWORD);
 Connection(USERNAME, PASSWORD);
 
 app.use(express.static(path.join(_dirname, "/client/dist")));
+app.get('*', (req, res)=>{
+  res.sendFile(path.resolve(_dirname, "client", "dist", "index.html"));
+})
 
 app.listen(PORT, ()=>console.log(`server is running successfully on PORT ${PORT}`));
 
