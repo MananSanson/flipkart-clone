@@ -18,7 +18,8 @@ app.use('/', Router);
 const PORT=process.env.PORT || 8000;
 
 const USERNAME=process.env.DB_USERNAME;
-const PASSWORD=process.env.DB_PASSWORD;
+const PASSWORD=encodeURIComponent( process.env.DB_PASSWORD);
+
 Connection(USERNAME, PASSWORD);
 
 app.listen(PORT, ()=>console.log(`server is running successfully on PORT ${PORT}`));
