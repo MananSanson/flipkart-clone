@@ -5,8 +5,11 @@ import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import DefaultData from './default.js';
 import Router from './routes/route.js';
+import path from "path";
 
 const app= express();
+
+const _dirname=path.resolve();
 
 dotenv.config();
 
